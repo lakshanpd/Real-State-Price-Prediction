@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Real State Price Prediction</title>
+  </head>
+  <body>
+    <form action="/submit" method="post">
+      Bedrooms <input type="text" name="bedrooms" /><br />
+      Bathrooms <input type="text" name="bathrooms" /><br />
+      sqft_living <input type="text" name="sqft_living" /><br />
+      sqft_lot <input type="text" name="sqft_lot" /><br />
+      floors <input type="text" name="floors" /><br />
+      view <input type="text" name="view" /><br />
+      sqft_above <input type="text" name="view" /><br />
+      yr_built <input type="text" name="view" /><br />
+      yr_renovated <input type="text" name="view" /><br />
+      <label for="city">city</label>
+      <select name="city" id="city">
+        {% for city in cities %}
+        <option value="{{ city }}">{{ city }}</option>
+        {% endfor %}</select
+      ><br />
+      <h2>{{price}}</h2>
+      <input type="submit" />
+    </form>
+  </body>
+</html>
